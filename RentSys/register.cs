@@ -68,7 +68,7 @@ namespace RentSys
 
             //连接数据库
             //设置连接字符串
-            string constr = "server=10.0.0.25,1433;database=RentSysData;User id=sa;password=passwordmima";
+            string constr = "server=.,1433;database=RentSysData;User id=sa;password=passwordmima";
             SqlConnection mycon = new SqlConnection(constr);                  //实例化连接对象
             mycon.Open();
             //新注册的用户是否存在

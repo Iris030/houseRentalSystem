@@ -59,6 +59,10 @@
             this.r_bid = new System.Windows.Forms.Label();
             this.b_addr = new System.Windows.Forms.Label();
             this.warning4 = new System.Windows.Forms.Label();
+            this.noWarning = new System.Windows.Forms.Label();
+            this.r_no = new System.Windows.Forms.TextBox();
+            this.房产证 = new System.Windows.Forms.Label();
+            this.must3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -98,7 +102,7 @@
             // 
             // r_price
             // 
-            this.r_price.Location = new System.Drawing.Point(328, 234);
+            this.r_price.Location = new System.Drawing.Point(328, 282);
             this.r_price.Name = "r_price";
             this.r_price.Size = new System.Drawing.Size(314, 31);
             this.r_price.TabIndex = 7;
@@ -107,7 +111,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 238);
+            this.label3.Location = new System.Drawing.Point(170, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 25);
             this.label3.TabIndex = 6;
@@ -115,7 +119,7 @@
             // 
             // r_rent
             // 
-            this.r_rent.Location = new System.Drawing.Point(328, 184);
+            this.r_rent.Location = new System.Drawing.Point(328, 232);
             this.r_rent.Name = "r_rent";
             this.r_rent.Size = new System.Drawing.Size(314, 31);
             this.r_rent.TabIndex = 5;
@@ -123,7 +127,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(170, 188);
+            this.label4.Location = new System.Drawing.Point(170, 236);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 25);
             this.label4.TabIndex = 4;
@@ -132,7 +136,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(170, 439);
+            this.label5.Location = new System.Drawing.Point(170, 487);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(138, 25);
             this.label5.TabIndex = 14;
@@ -140,7 +144,7 @@
             // 
             // r_pledge
             // 
-            this.r_pledge.Location = new System.Drawing.Point(328, 385);
+            this.r_pledge.Location = new System.Drawing.Point(328, 433);
             this.r_pledge.Name = "r_pledge";
             this.r_pledge.Size = new System.Drawing.Size(314, 31);
             this.r_pledge.TabIndex = 13;
@@ -149,7 +153,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(170, 389);
+            this.label6.Location = new System.Drawing.Point(170, 437);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 25);
             this.label6.TabIndex = 12;
@@ -157,7 +161,7 @@
             // 
             // r_owing
             // 
-            this.r_owing.Location = new System.Drawing.Point(328, 335);
+            this.r_owing.Location = new System.Drawing.Point(328, 383);
             this.r_owing.Name = "r_owing";
             this.r_owing.Size = new System.Drawing.Size(314, 31);
             this.r_owing.TabIndex = 11;
@@ -166,7 +170,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(170, 339);
+            this.label7.Location = new System.Drawing.Point(170, 387);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 25);
             this.label7.TabIndex = 10;
@@ -174,7 +178,7 @@
             // 
             // r_fee
             // 
-            this.r_fee.Location = new System.Drawing.Point(328, 285);
+            this.r_fee.Location = new System.Drawing.Point(328, 333);
             this.r_fee.Name = "r_fee";
             this.r_fee.Size = new System.Drawing.Size(314, 31);
             this.r_fee.TabIndex = 9;
@@ -183,7 +187,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(170, 289);
+            this.label8.Location = new System.Drawing.Point(170, 337);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 25);
             this.label8.TabIndex = 8;
@@ -192,7 +196,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(170, 491);
+            this.label9.Location = new System.Drawing.Point(170, 539);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(138, 25);
             this.label9.TabIndex = 16;
@@ -201,7 +205,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(170, 544);
+            this.label10.Location = new System.Drawing.Point(170, 592);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 25);
             this.label10.TabIndex = 18;
@@ -209,7 +213,7 @@
             // 
             // r_more
             // 
-            this.r_more.Location = new System.Drawing.Point(328, 544);
+            this.r_more.Location = new System.Drawing.Point(328, 592);
             this.r_more.Name = "r_more";
             this.r_more.Size = new System.Drawing.Size(482, 236);
             this.r_more.TabIndex = 19;
@@ -217,21 +221,21 @@
             // 
             // r_end
             // 
-            this.r_end.Location = new System.Drawing.Point(328, 485);
+            this.r_end.Location = new System.Drawing.Point(328, 533);
             this.r_end.Name = "r_end";
             this.r_end.Size = new System.Drawing.Size(391, 31);
             this.r_end.TabIndex = 20;
             // 
             // r_start
             // 
-            this.r_start.Location = new System.Drawing.Point(328, 437);
+            this.r_start.Location = new System.Drawing.Point(328, 485);
             this.r_start.Name = "r_start";
             this.r_start.Size = new System.Drawing.Size(391, 31);
             this.r_start.TabIndex = 21;
             // 
             // addRent
             // 
-            this.addRent.Location = new System.Drawing.Point(61, 723);
+            this.addRent.Location = new System.Drawing.Point(61, 771);
             this.addRent.Name = "addRent";
             this.addRent.Size = new System.Drawing.Size(94, 57);
             this.addRent.TabIndex = 22;
@@ -242,7 +246,7 @@
             // startno
             // 
             this.startno.AutoSize = true;
-            this.startno.Location = new System.Drawing.Point(735, 441);
+            this.startno.Location = new System.Drawing.Point(735, 489);
             this.startno.Name = "startno";
             this.startno.Size = new System.Drawing.Size(65, 29);
             this.startno.TabIndex = 23;
@@ -252,7 +256,7 @@
             // endno
             // 
             this.endno.AutoSize = true;
-            this.endno.Location = new System.Drawing.Point(735, 487);
+            this.endno.Location = new System.Drawing.Point(735, 535);
             this.endno.Name = "endno";
             this.endno.Size = new System.Drawing.Size(65, 29);
             this.endno.TabIndex = 24;
@@ -296,7 +300,7 @@
             this.warning2.AutoSize = true;
             this.warning2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.warning2.ForeColor = System.Drawing.Color.Red;
-            this.warning2.Location = new System.Drawing.Point(671, 190);
+            this.warning2.Location = new System.Drawing.Point(671, 238);
             this.warning2.Name = "warning2";
             this.warning2.Size = new System.Drawing.Size(95, 25);
             this.warning2.TabIndex = 29;
@@ -308,7 +312,7 @@
             this.warning3.AutoSize = true;
             this.warning3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.warning3.ForeColor = System.Drawing.Color.Red;
-            this.warning3.Location = new System.Drawing.Point(323, 792);
+            this.warning3.Location = new System.Drawing.Point(323, 840);
             this.warning3.Name = "warning3";
             this.warning3.Size = new System.Drawing.Size(108, 25);
             this.warning3.TabIndex = 34;
@@ -318,7 +322,7 @@
             // r_bid
             // 
             this.r_bid.AutoSize = true;
-            this.r_bid.Location = new System.Drawing.Point(56, 682);
+            this.r_bid.Location = new System.Drawing.Point(56, 730);
             this.r_bid.Name = "r_bid";
             this.r_bid.Size = new System.Drawing.Size(60, 25);
             this.r_bid.TabIndex = 35;
@@ -339,18 +343,61 @@
             this.warning4.AutoSize = true;
             this.warning4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.warning4.ForeColor = System.Drawing.Color.Red;
-            this.warning4.Location = new System.Drawing.Point(56, 792);
+            this.warning4.Location = new System.Drawing.Point(56, 840);
             this.warning4.Name = "warning4";
             this.warning4.Size = new System.Drawing.Size(144, 25);
             this.warning4.TabIndex = 37;
             this.warning4.Text = "新出租已存在";
             this.warning4.Visible = false;
             // 
+            // noWarning
+            // 
+            this.noWarning.AutoSize = true;
+            this.noWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.noWarning.ForeColor = System.Drawing.Color.Red;
+            this.noWarning.Location = new System.Drawing.Point(671, 186);
+            this.noWarning.Name = "noWarning";
+            this.noWarning.Size = new System.Drawing.Size(139, 25);
+            this.noWarning.TabIndex = 40;
+            this.noWarning.Text = "证号长度>50";
+            this.noWarning.Visible = false;
+            // 
+            // r_no
+            // 
+            this.r_no.Location = new System.Drawing.Point(328, 183);
+            this.r_no.Name = "r_no";
+            this.r_no.Size = new System.Drawing.Size(314, 31);
+            this.r_no.TabIndex = 39;
+            // 
+            // 房产证
+            // 
+            this.房产证.AutoSize = true;
+            this.房产证.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.房产证.Location = new System.Drawing.Point(170, 186);
+            this.房产证.Name = "房产证";
+            this.房产证.Size = new System.Drawing.Size(109, 25);
+            this.房产证.TabIndex = 38;
+            this.房产证.Text = "*房产证号";
+            // 
+            // must3
+            // 
+            this.must3.AutoSize = true;
+            this.must3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.must3.Location = new System.Drawing.Point(101, 186);
+            this.must3.Name = "must3";
+            this.must3.Size = new System.Drawing.Size(54, 25);
+            this.must3.TabIndex = 41;
+            this.must3.Text = "必填";
+            // 
             // add_rent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 921);
+            this.Controls.Add(this.must3);
+            this.Controls.Add(this.noWarning);
+            this.Controls.Add(this.r_no);
+            this.Controls.Add(this.房产证);
             this.Controls.Add(this.warning4);
             this.Controls.Add(this.b_addr);
             this.Controls.Add(this.r_bid);
@@ -423,5 +470,9 @@
         private System.Windows.Forms.Label r_bid;
         private System.Windows.Forms.Label b_addr;
         private System.Windows.Forms.Label warning4;
+        private System.Windows.Forms.Label noWarning;
+        private System.Windows.Forms.TextBox r_no;
+        private System.Windows.Forms.Label 房产证;
+        private System.Windows.Forms.Label must3;
     }
 }

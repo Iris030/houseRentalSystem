@@ -30,7 +30,7 @@ namespace RentSys
             }
             else
             {
-                string connectionString = "server=10.0.0.25,1433;database=RentSysData;User id=sa;password=passwordmima";
+                string connectionString = "server=.,1433;database=RentSysData;User id=sa;password=passwordmima";
                 SqlConnection SqlCon = new SqlConnection(connectionString); //数据库连接
                 SqlCon.Open(); //打开数据库
                 string sql = "Select * from admins where ad_name='" + username + "' and ad_email='" + email + "'";//查找用户sql语句

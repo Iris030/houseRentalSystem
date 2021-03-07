@@ -40,15 +40,15 @@
             this.r_start = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.r_end = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.r_more = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.r_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.b_name = new System.Windows.Forms.Label();
             this.cb_all = new System.Windows.Forms.CheckBox();
             this.refresh = new System.Windows.Forms.Button();
             this.changeRent = new System.Windows.Forms.Button();
             this.deleteRent = new System.Windows.Forms.Button();
             this.addRent = new System.Windows.Forms.Button();
-            this.b_no = new System.Windows.Forms.Label();
             this.b_id = new System.Windows.Forms.Label();
-            this.r_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.r_no = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listView1
@@ -56,6 +56,7 @@
             this.listView1.CheckBoxes = true;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.r_addr,
+            this.r_no,
             this.r_rent,
             this.r_area,
             this.r_price,
@@ -142,6 +143,11 @@
             this.r_more.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.r_more.Width = 200;
             // 
+            // r_id
+            // 
+            this.r_id.Text = "r_id";
+            this.r_id.Width = 0;
+            // 
             // b_name
             // 
             this.b_name.AutoSize = true;
@@ -207,30 +213,21 @@
             this.addRent.UseVisualStyleBackColor = true;
             this.addRent.Click += new System.EventHandler(this.addRent_Click);
             // 
-            // b_no
-            // 
-            this.b_no.AutoSize = true;
-            this.b_no.Location = new System.Drawing.Point(32, 95);
-            this.b_no.Name = "b_no";
-            this.b_no.Size = new System.Drawing.Size(60, 25);
-            this.b_no.TabIndex = 15;
-            this.b_no.Text = "b_no";
-            this.b_no.Visible = false;
-            // 
             // b_id
             // 
             this.b_id.AutoSize = true;
-            this.b_id.Location = new System.Drawing.Point(98, 95);
+            this.b_id.Location = new System.Drawing.Point(34, 92);
             this.b_id.Name = "b_id";
             this.b_id.Size = new System.Drawing.Size(53, 25);
             this.b_id.TabIndex = 16;
             this.b_id.Text = "b_id";
             this.b_id.Visible = false;
             // 
-            // r_id
+            // r_no
             // 
-            this.r_id.Text = "r_id";
-            this.r_id.Width = 0;
+            this.r_no.Text = "房产证号";
+            this.r_no.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.r_no.Width = 200;
             // 
             // rent
             // 
@@ -238,7 +235,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1356, 1038);
             this.Controls.Add(this.b_id);
-            this.Controls.Add(this.b_no);
             this.Controls.Add(this.cb_all);
             this.Controls.Add(this.refresh);
             this.Controls.Add(this.changeRent);
@@ -264,7 +260,6 @@
         private System.Windows.Forms.Button changeRent;
         private System.Windows.Forms.Button deleteRent;
         private System.Windows.Forms.Button addRent;
-        private System.Windows.Forms.Label b_no;
         private System.Windows.Forms.ColumnHeader r_addr;
         private System.Windows.Forms.ColumnHeader r_rent;
         private System.Windows.Forms.ColumnHeader r_area;
@@ -278,5 +273,6 @@
         private System.Windows.Forms.ColumnHeader r_more;
         private System.Windows.Forms.Label b_id;
         private System.Windows.Forms.ColumnHeader r_id;
+        private System.Windows.Forms.ColumnHeader r_no;
     }
 }

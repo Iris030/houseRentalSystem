@@ -22,3 +22,4 @@ C:\Users\iris0\code\RentSys\RentSys\obj\Debug\RentSys.show_report.resources
 C:\Users\iris0\code\RentSys\RentSys\bin\Debug\EPPlus.dll
 C:\Users\iris0\code\RentSys\RentSys\bin\Debug\EPPlus.xml
 C:\Users\iris0\code\RentSys\RentSys\obj\Debug\RentSys.csproj.CopyComplete
+C:\Users\iris0\code\RentSys\RentSys\obj\Debug\RentSys.csprojAssemblyReference.cache

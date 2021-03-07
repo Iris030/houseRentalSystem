@@ -18,29 +18,18 @@ namespace RentSys
         {
             InitializeComponent();
             b_name.Text = item.SubItems[0].Text;
-            b_no.Text = item.SubItems[1].Text;
-            string constr = "server=10.0.0.25,1433;database=RentSysData;User id=sa;password=passwordmima";
-            SqlConnection mycon = new SqlConnection(constr);                  //实例化连接对象
-            mycon.Open();
-            SqlCommand select = mycon.CreateCommand();       //创建SQL命令执行对象
-            string s = "select b_id from buildings where b_no='" + b_no.Text + "'";
-            select.CommandText = s;
-            SqlDataAdapter sel = new SqlDataAdapter();       //实例化数据适配器
-            sel.SelectCommand = select;                    //让适配器执行SELECT命令
-            DataTable dt = new DataTable();
-            sel.Fill(dt);
-            b_id.Text = dt.Rows[0]["b_id"].ToString().Trim();
+            b_id.Text = item.SubItems[5].Text;
         }
 
         private void rent_Load(object sender, EventArgs e)
         {
             //连接数据库
             //设置连接字符串
-            string constr = "server=10.0.0.25,1433;database=RentSysData;User id=sa;password=passwordmima";
+            string constr = "server=.,1433;database=RentSysData;User id=sa;password=passwordmima";
             SqlConnection mycon = new SqlConnection(constr);                  //实例化连接对象
             mycon.Open();
             SqlCommand listBCmd = mycon.CreateCommand();       //创建SQL命令执行对象
-            string s = "select r_id,r_addr,r_rent,r_area,r_price,r_fee,r_owing,r_pledge,r_start,r_end,r_more from rents where r_bid =' " + b_id.Text + " '";
+            string s = "select r_id,r_no,r_addr,r_rent,r_area,r_price,r_fee,r_owing,r_pledge,r_start,r_end,r_more from rents where r_bid =' " + b_id.Text + " '";
             listBCmd.CommandText = s;
             SqlDataAdapter listB = new SqlDataAdapter();       //实例化数据适配器
             listB.SelectCommand = listBCmd;                   //让适配器执行SELECT命令
@@ -60,6 +49,7 @@ namespace RentSys
                 //Add Item to ListView.
                 ListViewItem item = new ListViewItem();
                 item.Text = row["r_addr"].ToString();
+                item.SubItems.Add(row["r_no"].ToString());
                 item.SubItems.Add(row["r_rent"].ToString());
                 item.SubItems.Add(row["r_area"].ToString());
                 item.SubItems.Add(row["r_price"].ToString());
@@ -84,7 +74,7 @@ namespace RentSys
 
         private void addRent_Click(object sender, EventArgs e)
         {
-            add_rent add = new add_rent(b_no);
+            add_rent add = new add_rent(b_id);
             add.Show();
         }
 
@@ -109,7 +99,7 @@ namespace RentSys
         {
             //连接数据库
             //设置连接字符串
-            string constr = "server=10.0.0.25,1433;database=RentSysData;User id=sa;password=passwordmima";
+            string constr = "server=.,1433;database=RentSysData;User id=sa;password=passwordmima";
             SqlConnection mycon = new SqlConnection(constr);                  //实例化连接对象
             mycon.Open();
 
@@ -117,7 +107,7 @@ namespace RentSys
             {
                 if (item.Checked)
                 {
-                    string s2 = "delete from rents where r_id = '" + item.SubItems[11].Text + "'";
+                    string s2 = "delete from rents where r_id = '" + item.SubItems[12].Text + "'";
                     SqlCommand listBCmd = new SqlCommand(s2, mycon);      //初始化命令
                     listBCmd.ExecuteNonQuery();                              //执行语句
                 }
@@ -145,9 +135,9 @@ namespace RentSys
             /*
             <?xml version="1.0" encoding="utf-8"?>
             <Buildings>
-              <building b_id="1">
+              <building>
+                <b_id></b_id>
                 <b_name></b_name>
-                <b_no></b_no>
                 <b_owner></b_owner>
                 <b_area></b_area>
                 <b_addr></b_addr>
@@ -163,6 +153,7 @@ namespace RentSys
                         <r_start></r_start>
                         <r_end></r_end>
                         <r_more></r_more>
+                        <r_no></r_no>
                     </rent>
                 </rents>
                 <b_empty></b_empty>
@@ -177,7 +168,7 @@ namespace RentSys
 
             //连接数据库
             //设置连接字符串
-            string constr = "server=10.0.0.25,1433;database=RentSysData;User id=sa;password=passwordmima";
+            string constr = "server=.,1433;database=RentSysData;User id=sa;password=passwordmima";
             SqlConnection mycon = new SqlConnection(constr);                  //实例化连接对象
             mycon.Open();
 
@@ -217,18 +208,18 @@ namespace RentSys
                 building.SetAttribute("b_id", row["b_id"].ToString());
                 Buildings.AppendChild(building);
 
+                XmlElement b_id = buildings.CreateElement("b_id");
+                b_id.InnerText = row["b_id"].ToString();
                 XmlElement b_name = buildings.CreateElement("b_name");
                 b_name.InnerText = row["b_name"].ToString();
-                XmlElement b_no = buildings.CreateElement("b_no");
-                b_no.InnerText = row["b_no"].ToString();
                 XmlElement b_owner = buildings.CreateElement("b_owner");
                 b_owner.InnerText = row["b_owner"].ToString();
                 XmlElement b_area = buildings.CreateElement("b_area");
                 b_area.InnerText = row["b_area"].ToString();
                 XmlElement b_addr = buildings.CreateElement("b_addr");
                 b_addr.InnerText = row["b_addr"].ToString();
+                building.AppendChild(b_id);
                 building.AppendChild(b_name);
-                building.AppendChild(b_no);
                 building.AppendChild(b_owner);
                 building.AppendChild(b_area);
                 building.AppendChild(b_addr);
@@ -263,6 +254,8 @@ namespace RentSys
                     r_end.InnerText = r_row["r_end"].ToString();
                     XmlElement r_more = buildings.CreateElement("r_more");
                     r_more.InnerText = r_row["r_more"].ToString();
+                    XmlElement r_no = buildings.CreateElement("r_no");
+                    r_no.InnerText = r_row["r_no"].ToString();
 
                     rent.AppendChild(r_rent);
                     rent.AppendChild(r_addr);
@@ -273,6 +266,7 @@ namespace RentSys
                     rent.AppendChild(r_start);
                     rent.AppendChild(r_end);
                     rent.AppendChild(r_more);
+                    rent.AppendChild(r_no);
 
                     area_total = area_total + float.Parse(r_row["r_area"].ToString());
                 }

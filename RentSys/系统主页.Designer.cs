@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.建筑tab = new System.Windows.Forms.TabPage();
             this.more = new System.Windows.Forms.Button();
@@ -38,11 +39,11 @@
             this.addBuilding = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.b_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.b_no = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.b_owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.b_area = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.b_addr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.b_empty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.b_id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.搜索tab = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -53,6 +54,7 @@
             this.cb2 = new System.Windows.Forms.CheckBox();
             this.listView2 = new System.Windows.Forms.ListView();
             this.building = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.no = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.addr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.rent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.area = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -87,6 +89,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.管理员tab = new System.Windows.Forms.TabPage();
+            this.add_more_b_r = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.c_email = new System.Windows.Forms.Button();
             this.c_password = new System.Windows.Forms.Button();
@@ -94,6 +97,7 @@
             this.leave = new System.Windows.Forms.Button();
             this.name = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.建筑tab.SuspendLayout();
             this.搜索tab.SuspendLayout();
@@ -202,11 +206,11 @@
             this.listView1.CheckBoxes = true;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.b_name,
-            this.b_no,
             this.b_owner,
             this.b_area,
             this.b_addr,
-            this.b_empty});
+            this.b_empty,
+            this.b_id});
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
@@ -221,12 +225,6 @@
             // 
             this.b_name.Text = "名称";
             this.b_name.Width = 200;
-            // 
-            // b_no
-            // 
-            this.b_no.Text = "房产证号";
-            this.b_no.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.b_no.Width = 200;
             // 
             // b_owner
             // 
@@ -251,6 +249,11 @@
             this.b_empty.Text = "空置率";
             this.b_empty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.b_empty.Width = 200;
+            // 
+            // b_id
+            // 
+            this.b_id.Text = "id";
+            this.b_id.Width = 0;
             // 
             // 搜索tab
             // 
@@ -289,6 +292,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "建筑名称",
+            "房产证号",
             "地址",
             "承租人",
             "面积",
@@ -361,6 +365,7 @@
             this.listView2.CheckBoxes = true;
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.building,
+            this.no,
             this.addr,
             this.rent,
             this.area,
@@ -387,6 +392,12 @@
             // 
             this.building.Text = "建筑名称";
             this.building.Width = 200;
+            // 
+            // no
+            // 
+            this.no.Text = "房产证号";
+            this.no.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.no.Width = 200;
             // 
             // addr
             // 
@@ -420,14 +431,14 @@
             // 
             // fee
             // 
-            this.fee.DisplayIndex = 7;
+            this.fee.DisplayIndex = 8;
             this.fee.Text = "管理费";
             this.fee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.fee.Width = 200;
             // 
             // owing
             // 
-            this.owing.DisplayIndex = 6;
+            this.owing.DisplayIndex = 7;
             this.owing.Text = "欠租";
             this.owing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.owing.Width = 200;
@@ -701,6 +712,7 @@
             // 
             // 管理员tab
             // 
+            this.管理员tab.Controls.Add(this.add_more_b_r);
             this.管理员tab.Controls.Add(this.button1);
             this.管理员tab.Controls.Add(this.c_email);
             this.管理员tab.Controls.Add(this.c_password);
@@ -714,6 +726,19 @@
             this.管理员tab.TabIndex = 3;
             this.管理员tab.Text = "管理员";
             this.管理员tab.UseVisualStyleBackColor = true;
+            // 
+            // add_more_b_r
+            // 
+            this.add_more_b_r.BackColor = System.Drawing.Color.YellowGreen;
+            this.add_more_b_r.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.add_more_b_r.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.add_more_b_r.Location = new System.Drawing.Point(86, 324);
+            this.add_more_b_r.Name = "add_more_b_r";
+            this.add_more_b_r.Size = new System.Drawing.Size(541, 62);
+            this.add_more_b_r.TabIndex = 9;
+            this.add_more_b_r.Text = "一键新增建筑/租赁";
+            this.add_more_b_r.UseVisualStyleBackColor = false;
+            this.add_more_b_r.Click += new System.EventHandler(this.add_more_b_r_Click);
             // 
             // button1
             // 
@@ -765,7 +790,7 @@
             this.leave.BackColor = System.Drawing.Color.LightCoral;
             this.leave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.leave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.leave.Location = new System.Drawing.Point(86, 349);
+            this.leave.Location = new System.Drawing.Point(86, 436);
             this.leave.Name = "leave";
             this.leave.Size = new System.Drawing.Size(541, 62);
             this.leave.TabIndex = 4;
@@ -835,7 +860,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button c_email;
         private System.Windows.Forms.ColumnHeader b_name;
-        private System.Windows.Forms.ColumnHeader b_no;
         private System.Windows.Forms.ColumnHeader b_owner;
         private System.Windows.Forms.ColumnHeader b_area;
         private System.Windows.Forms.ColumnHeader b_addr;
@@ -888,5 +912,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ColumnHeader re_id;
         private System.Windows.Forms.ColumnHeader re_date;
+        private System.Windows.Forms.Button add_more_b_r;
+        private System.Windows.Forms.ColumnHeader b_id;
+        private System.Windows.Forms.ColumnHeader no;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

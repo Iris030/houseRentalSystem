@@ -29,18 +29,17 @@
         private void InitializeComponent()
         {
             this.listView1 = new System.Windows.Forms.ListView();
+            this.b_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.b_owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.b_area = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.b_addr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.b_empty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.dd = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.admin = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.avr_empty = new System.Windows.Forms.Label();
-            this.b_name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.b_no = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.b_owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.b_area = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.b_addr = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.b_empty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.reid = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -48,7 +47,6 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.b_name,
-            this.b_no,
             this.b_owner,
             this.b_area,
             this.b_addr,
@@ -63,6 +61,35 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // b_name
+            // 
+            this.b_name.Text = "名称";
+            this.b_name.Width = 200;
+            // 
+            // b_owner
+            // 
+            this.b_owner.Text = "房产权属人";
+            this.b_owner.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.b_owner.Width = 300;
+            // 
+            // b_area
+            // 
+            this.b_area.Text = "面积";
+            this.b_area.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.b_area.Width = 200;
+            // 
+            // b_addr
+            // 
+            this.b_addr.Text = "地址";
+            this.b_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.b_addr.Width = 200;
+            // 
+            // b_empty
+            // 
+            this.b_empty.Text = "空置率";
+            this.b_empty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.b_empty.Width = 200;
             // 
             // label1
             // 
@@ -124,41 +151,6 @@
             this.avr_empty.TabIndex = 6;
             this.avr_empty.Text = "avr_empty";
             // 
-            // b_name
-            // 
-            this.b_name.Text = "名称";
-            this.b_name.Width = 200;
-            // 
-            // b_no
-            // 
-            this.b_no.Text = "房产证号";
-            this.b_no.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.b_no.Width = 300;
-            // 
-            // b_owner
-            // 
-            this.b_owner.Text = "房产权属人";
-            this.b_owner.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.b_owner.Width = 300;
-            // 
-            // b_area
-            // 
-            this.b_area.Text = "面积";
-            this.b_area.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.b_area.Width = 200;
-            // 
-            // b_addr
-            // 
-            this.b_addr.Text = "地址";
-            this.b_addr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.b_addr.Width = 200;
-            // 
-            // b_empty
-            // 
-            this.b_empty.Text = "空置率";
-            this.b_empty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.b_empty.Width = 200;
-            // 
             // reid
             // 
             this.reid.AutoSize = true;
@@ -201,7 +193,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label avr_empty;
         private System.Windows.Forms.ColumnHeader b_name;
-        private System.Windows.Forms.ColumnHeader b_no;
         private System.Windows.Forms.ColumnHeader b_owner;
         private System.Windows.Forms.ColumnHeader b_area;
         private System.Windows.Forms.ColumnHeader b_addr;
